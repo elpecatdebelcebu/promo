@@ -37,10 +37,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 10% 0%, rgba(63, 111, 90, 0.28), transparent 32%),
-    radial-gradient(circle at 90% 18%, rgba(199, 168, 107, 0.08), transparent 28%),
-    linear-gradient(180deg, #030504 0%, var(--dark-green) 46%, #030504 100%);
-  color: var(--warm-white);
+    radial-gradient(circle at 10% 0%, rgba(63, 111, 90, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color: var(--dark-green);
   font-family: var(--f-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -76,12 +75,10 @@ a {
 .form-section {
   margin: 18px 0;
   padding: clamp(22px, 4vw, 34px);
-  background:
-    linear-gradient(145deg, rgba(15, 26, 23, 0.92), rgba(7, 17, 14, 0.78));
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
 }
 
 .section-title {
@@ -204,8 +201,8 @@ strong {
   padding: 0 24px;
   border: 0;
   border-radius: 999px;
-  background: var(--warm-white);
-  color: var(--dark-green);
+  background: var(--dark-green);
+  color: #ffffff;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
