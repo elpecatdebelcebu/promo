@@ -5,21 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>La Ruta de la Tentación | Belcebú</title>
+  <title>La Ruta de la Tentación | Belcebú y El Pecat</title>
 
   <meta name="description"
-    content="Tapa del mes en Belcebú y El Pecat. Tapa + bebida por 4€ los miércoles y jueves de mayo y junio. Participa con tu ticket y gana premios." />
+    content="Tapa del mes en Belcebú y El Pecat. Tapa + bebida por 4€. Miércoles y jueves de mayo y junio. Participa con tu ticket y gana premios." />
 
   <meta property="og:title" content="La Ruta de la Tentación | Belcebú" />
   <meta property="og:description"
     content="Tapa + bebida por 4€. Miércoles y jueves de mayo y junio. Participa con tu ticket y gana premios." />
-  <meta property="og:image" content="assets/flyers/flyer-belcebu.jpg" />
+  <meta property="og:image" content="https://elpecatdebelcebu.github.io/promo/assets/flyers/flyer-belcebu.jpg" />
+  <meta property="og:url" content="https://elpecatdebelcebu.github.io/promo/" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css" />
@@ -30,21 +31,19 @@
   <div id="app">
 
     <header class="hero-section">
-      <div class="hero-overlay"></div>
-
       <div class="hero-content">
         <img id="heroLogo" class="hero-logo" src="assets/logos/logo-belcebu.png" alt="Belcebú" />
 
         <p class="eyebrow">Miércoles y jueves · Mayo y junio</p>
 
         <h1 class="hero-title">
-          LA RUTA DE<br>
-          LA TENTACIÓN
+          La Ruta de<br>
+          la Tentación
         </h1>
 
         <p class="hero-subtitle">Tapa del mes + bebida</p>
 
-        <div class="price-card">
+        <div class="price-card" aria-label="Precio de la promoción">
           <span class="price">4€</span>
           <span class="price-text">Tapa + 1 bebida</span>
         </div>
@@ -64,10 +63,10 @@
 
     <main class="content-section">
 
-      <section class="section-block local-selector-block">
-        <h2 class="section-title">Elige tu tentación</h2>
+      <section class="section-block local-selector-block" aria-labelledby="locales-title">
+        <h2 id="locales-title" class="section-title">Elige tu tentación</h2>
         <p class="section-intro">
-          Puedes participar con ticket de Belcebú o de El Pecat.
+          Participa con tu ticket de <strong>Belcebú</strong> o de <strong>El Pecat</strong>.
         </p>
 
         <div class="local-cards">
@@ -85,9 +84,9 @@
         </div>
       </section>
 
-      <section class="section-block tapa-section">
+      <section class="section-block tapa-section" aria-labelledby="tapa-title">
         <div class="tapa-copy">
-          <h2 class="section-title">La tapa del mes</h2>
+          <h2 id="tapa-title" class="section-title">La tapa del mes</h2>
 
           <p id="tapaName" class="tapa-name">
             Donut relleno de Pulled Pork
@@ -98,27 +97,27 @@
           </p>
 
           <ul class="promo-list">
-            <li>Tapa + 1 bebida</li>
+            <li><strong>Tapa + 1 bebida</strong></li>
             <li>Caña, copa de vino, refresco o agua</li>
             <li>Miércoles y jueves de mayo y junio</li>
-            <li>Precio especial: 4€</li>
+            <li><strong>Precio especial: 4€</strong></li>
           </ul>
         </div>
 
         <div class="flyer-card">
-          <img id="flyerImage" src="assets/flyers/flyer-belcebu.jpg" alt="Flyer tapa del mes Belcebú" />
+          <img id="flyerImage" src="assets/flyers/flyer-belcebu.jpg" alt="Flyer de la tapa del mes de Belcebú" />
         </div>
       </section>
 
-      <section class="section-block">
-        <h2 class="section-title">Cómo funciona</h2>
+      <section class="section-block" aria-labelledby="funciona-title">
+        <h2 id="funciona-title" class="section-title">Cómo funciona</h2>
 
         <div class="steps-list">
           <article class="step-card">
             <div class="step-num">01</div>
             <div class="step-content">
               <strong>Prueba la tapa</strong>
-              <p>Disfruta de la propuesta especial del jueves en <span class="local-name">BELCEBÚ</span>.</p>
+              <p>Disfruta de la propuesta especial en <span class="local-name">BELCEBÚ</span>.</p>
             </div>
           </article>
 
@@ -126,7 +125,7 @@
             <div class="step-num">02</div>
             <div class="step-content">
               <strong>Guarda tu ticket</strong>
-              <p>Introduce el número de ticket para registrar tu participación.</p>
+              <p>Necesitarás el número de ticket para registrar tu participación.</p>
             </div>
           </article>
 
@@ -140,8 +139,8 @@
         </div>
       </section>
 
-      <section class="section-block">
-        <h2 class="section-title">Premios</h2>
+      <section class="section-block" aria-labelledby="premios-title">
+        <h2 id="premios-title" class="section-title">Premios</h2>
 
         <div class="prize-grid">
           <div class="prize-item">
@@ -154,7 +153,7 @@
             <small>Una experiencia para compartir.</small>
           </div>
 
-          <div class="prize-item full-width">
+          <div class="prize-item">
             <strong>Cenas para dos</strong>
             <small>El premio grande para quienes caen en la tentación.</small>
           </div>
@@ -162,8 +161,8 @@
       </section>
     </main>
 
-    <section id="participa" class="form-section">
-      <h2 class="section-title">Participa</h2>
+    <section id="participa" class="form-section" aria-labelledby="participa-title">
+      <h2 id="participa-title" class="section-title">Participa</h2>
       <p class="section-intro">
         Rellena tus datos y registra el número de ticket.
       </p>
@@ -180,22 +179,22 @@
       <form id="participation-form">
         <div class="input-group">
           <label class="label" for="nombre">Nombre *</label>
-          <input class="input" id="nombre" name="nombre" type="text" required />
+          <input class="input" id="nombre" name="nombre" type="text" autocomplete="name" required />
         </div>
 
         <div class="input-group">
           <label class="label" for="telefono">Teléfono *</label>
-          <input class="input" id="telefono" name="telefono" type="tel" required />
+          <input class="input" id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required />
         </div>
 
         <div class="input-group">
           <label class="label" for="email">Correo electrónico *</label>
-          <input class="input" id="email" name="email" type="email" required />
+          <input class="input" id="email" name="email" type="email" autocomplete="email" required />
         </div>
 
         <div class="input-group">
           <label class="label" for="ticket">Número de ticket *</label>
-          <input class="input" id="ticket" name="ticket" type="text" required />
+          <input class="input" id="ticket" name="ticket" type="text" autocomplete="off" required />
         </div>
 
         <div class="checkbox-group">
@@ -217,13 +216,13 @@
 
         <button class="btn-submit" type="submit">Enviar participación</button>
 
-        <div id="form-message" class="message"></div>
+        <div id="form-message" class="message" role="status" aria-live="polite"></div>
       </form>
     </section>
   </div>
 
   <footer class="main-footer">
-    © 2026 Belcebú · La Ruta de la Tentación
+    © 2026 Belcebú · El Pecat · La Ruta de la Tentación
   </footer>
 </body>
 

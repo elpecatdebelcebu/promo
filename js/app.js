@@ -3,20 +3,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('#participation-form');
   const messageContainer = document.querySelector('#form-message');
-  const localDisplayElements = document.querySelectorAll('.local-name');
   const submitBtn = form.querySelector('button[type="submit"]');
   const localSelect = document.querySelector('#localSelect');
 
-  const getLocalDisplay = (value) => {
-    if (value === 'pecat') return 'EL PECAT';
-    if (value === 'belcebu') return 'BELCEBÚ';
-    return 'BELCEBÚ';
+  const localDisplayElements = document.querySelectorAll('.local-name');
+  const localCards = document.querySelectorAll('.local-card');
+
+  const heroLogo = document.querySelector('#heroLogo');
+  const heroTapa = document.querySelector('#heroTapa');
+  const flyerImage = document.querySelector('#flyerImage');
+  const tapaName = document.querySelector('#tapaName');
+  const tapaDescription = document.querySelector('#tapaDescription');
+
+  const localData = {
+    belcebu: {
+      displayName: 'BELCEBÚ',
+      logo: 'assets/logos/logo-belcebu.png',
+      tapa: 'assets/tapas/tapa-belcebu.jpg',
+      flyer: 'assets/flyers/flyer-belcebu.jpg',
+      tapaName: 'Donut relleno de Pulled Pork',
+      tapaDescription: 'Donut relleno de pulled pork, cebolla encurtida, salsa cheddar y jalapeños.'
+    },
+    pecat: {
+      displayName: 'EL PECAT',
+      logo: 'assets/logos/logo-pecat.png',
+      tapa: 'assets/tapas/tapa-pecat.jpg',
+      flyer: 'assets/flyers/flyer-pecat.jpg',
+      tapaName: 'Mini burger de sepia',
+      tapaDescription: 'Mini burger de sepia con cebolla caramelizada, mezclum y salsa de la casa.'
+    }
   };
 
-  localSelect.addEventListener('change', () => {
-    const displayName = getLocalDisplay(localSelect.value);
+  function getLocalData(value) {
+    return localData[value] || localData.belcebu;
+  }
+
+  function updateLocalVisuals(value) {
+    const local = value || 'belcebu';
+    const data = getLocalData(local);
+
     localDisplayElements.forEach(el => {
-      el.textContent = displayName;
+      el.textContent = data.displayName;
+    });
+
+    localCards.forEach(card => {
+      card.classList.toggle('active', card.dataset.local === local);
+    });
+
+    if (heroLogo) {
+      heroLogo.src = data.logo;
+      heroLogo.alt = data.displayName;
+    }
+
+    if (heroTapa) {
+      heroTapa.src = data.tapa;
+      heroTapa.alt = data.tapaName;
+    }
+
+    if (flyerImage) {
+      flyerImage.src = data.flyer;
+      flyerImage.alt = `Flyer ${data.displayName}`;
+    }
+
+    if (tapaName) {
+      tapaName.textContent = data.tapaName;
+    }
+
+    if (tapaDescription) {
+      tapaDescription.textContent = data.tapaDescription;
+    }
+
+    if (localSelect && localSelect.value !== local) {
+      localSelect.value = local;
+    }
+  }
+
+  localSelect.addEventListener('change', () => {
+    updateLocalVisuals(localSelect.value || 'belcebu');
+  });
+
+  localCards.forEach(card => {
+    card.addEventListener('click', () => {
+      updateLocalVisuals(card.dataset.local);
     });
   });
 
@@ -62,11 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (API_URL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL')) {
-      showMessage('Falta configurar la URL de Google Apps Script.', 'error');
-      return;
-    }
-
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
@@ -88,11 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       showMessage(result.message || '¡Participación registrada con éxito! Mucha suerte.', 'success');
-      form.reset();
 
-      localDisplayElements.forEach(el => {
-        el.textContent = 'BELCEBÚ';
-      });
+      form.reset();
+      updateLocalVisuals('belcebu');
 
     } catch (error) {
       console.error(error);
@@ -116,4 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
     messageContainer.className = 'message';
     messageContainer.style.display = 'none';
   }
+
+  updateLocalVisuals('belcebu');
 });
