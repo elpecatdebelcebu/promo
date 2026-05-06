@@ -5,9 +5,7 @@
 :root {
   --bg: #050807;
   --dark-green: #07110e;
-  --panel-green: rgba(15, 26, 23, 0.82);
   --panel-soft: rgba(255, 255, 255, 0.045);
-
   --accent-green: #3f6f5a;
   --soft-green: #78a08b;
   --warm-white: #f2eee6;
@@ -15,14 +13,9 @@
   --line: rgba(120, 160, 139, 0.22);
   --gold: #c7a86b;
   --red: #e9342f;
-
   --f-serif: 'Playfair Display', serif;
   --f-sans: 'Inter', sans-serif;
-
   --radius-xl: 34px;
-  --radius-lg: 26px;
-  --radius-md: 18px;
-
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
 }
 
@@ -72,7 +65,7 @@ a {
 /* GENERAL */
 
 #app {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
 }
 
@@ -112,21 +105,20 @@ strong {
 .hero-section {
   min-height: auto;
   display: block;
-  padding: 46px 0 20px;
+  padding: 34px 0 10px;
 }
 
 .hero-content {
-  max-width: 760px;
+  max-width: 1080px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-logo {
-  width: clamp(120px, 18vw, 170px);
+  width: clamp(120px, 12vw, 160px);
   height: auto;
-  margin: 0 auto 26px;
+  margin: 0 0 22px;
   opacity: 0.96;
-  mix-blend-mode: screen;
 }
 
 .eyebrow {
@@ -146,10 +138,11 @@ strong {
 }
 
 .hero-title {
+  max-width: 1080px;
   font-family: var(--f-serif);
-  font-size: clamp(42px, 7vw, 76px);
-  line-height: 0.95;
-  letter-spacing: -1.4px;
+  font-size: clamp(58px, 8vw, 118px);
+  line-height: 0.88;
+  letter-spacing: -2.8px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -157,17 +150,17 @@ strong {
 .hero-subtitle {
   font-family: var(--f-serif);
   color: var(--gold);
-  font-size: clamp(21px, 3vw, 32px);
+  font-size: clamp(24px, 3vw, 38px);
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-description {
-  max-width: 600px;
-  margin: 20px auto 26px;
+  max-width: 720px;
+  margin: 20px 0 26px;
   color: var(--muted-white);
   line-height: 1.65;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .price-card {
@@ -185,7 +178,7 @@ strong {
 
 .price {
   font-family: var(--f-serif);
-  font-size: 44px;
+  font-size: 46px;
   line-height: 0.9;
   font-weight: 700;
 }
@@ -482,7 +475,7 @@ select.input option {
 /* FOOTER */
 
 .main-footer {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
   padding: 12px 0 36px;
   text-align: center;
@@ -495,6 +488,15 @@ select.input option {
 @media (max-width: 960px) {
   #app {
     width: min(100% - 24px, 720px);
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-title {
+    font-size: clamp(54px, 12vw, 86px);
+    letter-spacing: -1.8px;
   }
 
   .tapa-section {
@@ -523,18 +525,36 @@ select.input option {
     border-radius: 24px;
   }
 
-  .hero-title {
-    font-size: 43px;
-    letter-spacing: -0.8px;
+  .hero-section {
+    padding: 28px 0 8px;
+  }
+
+  .hero-content {
+    text-align: left;
   }
 
   .hero-logo {
-    width: 138px;
+    width: 130px;
+    margin-bottom: 20px;
   }
 
   .eyebrow {
     font-size: 10px;
     letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    line-height: 0.92;
+    letter-spacing: -1px;
+  }
+
+  .hero-subtitle {
+    font-size: 25px;
+  }
+
+  .hero-description {
+    font-size: 15px;
   }
 
   .price-card {
