@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Ruta de la Tentación | Belcebú</title>
+
+  <meta name="description"
+    content="Descubre nuestra tapa especial con bebida por solo 4€ y participa en los sorteos exclusivos de Belcebú." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <header class="hero-section">
+      <div class="hero-bg"></div>
+
+      <div class="hero-content">
+        <img id="heroLogo" class="hero-logo" src="assets/logos/logo-belcebu.png" alt="Belcebú" />
+
+        <p class="eyebrow">Promo especial de jueves</p>
+
+        <h1 class="hero-title">
+          LA RUTA DE<br />
+          LA TENTACIÓN
+        </h1>
+
+        <p class="hero-subtitle">El pecado del jueves</p>
+
+        <p class="hero-description">
+          Tapa especial + bebida por solo <strong>4€</strong>.
+          Guarda tu ticket y participa en sorteos exclusivos.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#participa" class="btn-primary">Participar ahora</a>
+          <span class="price-badge">4€</span>
+        </div>
+      </div>
+
+      <div class="hero-image-card">
+        <img id="heroTapa" src="assets/tapas/tapa-belcebu-donut.jpg" alt="Tapa especial Belcebú" />
+      </div>
+    </header>
+
+    <main class="col content-section">
+      <section class="section-block">
+        <h2 class="section-title">Cómo funciona</h2>
+
+        <div class="steps-list">
+          <article class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <strong>Prueba la tapa</strong>
+              <p>Disfruta de la propuesta especial del jueves en <span class="local-name">BELCEBÚ</span>.</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <strong>Guarda tu ticket</strong>
+              <p>Introduce el número de ticket para registrar tu participación.</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <strong>Participa y gana</strong>
+              <p>Cada ticket válido suma una oportunidad en los sorteos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-title">Premios</h2>
+
+        <div class="prize-grid">
+          <div class="prize-item">
+            <strong>Almuerzos para dos</strong>
+            <small>Para disfrutar sin prisa.</small>
+          </div>
+
+          <div class="prize-item">
+            <strong>Comidas para dos</strong>
+            <small>Una experiencia para compartir.</small>
+          </div>
+
+          <div class="prize-item full-width">
+            <strong>Cenas para dos</strong>
+            <small>El premio grande para quienes caen en la tentación.</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="col form-section">
+      <h2 class="section-title">Participa</h2>
+
+      <div class="input-group">
+        <label class="label" for="localSelect">Local *</label>
+        <select class="input" id="localSelect" name="localSelect" required>
+          <option value="">Selecciona un local</option>
+          <option value="belcebu">Belcebú</option>
+          <option value="pecat">El Pecat</option>
+        </select>
+      </div>
+
+      <form id="participation-form">
+        <div class="input-group">
+          <label class="label" for="nombre">Nombre *</label>
+          <input class="input" id="nombre" name="nombre" type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label class="label" for="telefono">Teléfono *</label>
+          <input class="input" id="telefono" name="telefono" type="tel" required />
+        </div>
+
+        <div class="input-group">
+          <label class="label" for="email">Correo electrónico *</label>
+          <input class="input" id="email" name="email" type="email" required />
+        </div>
+
+        <div class="input-group">
+          <label class="label" for="ticket">Número de ticket *</label>
+          <input class="input" id="ticket" name="ticket" type="text" required />
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" name="aceptaPrivacidad" required />
+            <span>Acepto la política de privacidad y RGPD *</span>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="aceptaBases" required />
+            <span>Acepto las bases legales del sorteo *</span>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="aceptaPromociones" />
+            <span>Deseo recibir ofertas y promociones</span>
+          </label>
+        </div>
+
+        <button class="btn-submit" type="submit">Enviar participación</button>
+
+        <div id="form-message" class="message"></div>
+      </form>
+    </section>
+  </div>
+
+  <footer class="main-footer">
+    © 2026 Belcebú · La Ruta de la Tentación
+  </footer>
+</body>
+
+</html>
