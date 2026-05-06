@@ -197,12 +197,12 @@ strong {
 }
 
 .price-card {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 14px;
   border-radius: 18px;
   background: linear-gradient(145deg, #3f6f5a, #2c5141);
   color: #ffffff;
@@ -214,14 +214,16 @@ strong {
   font-size: 40px;
   line-height: 0.9;
   font-weight: 700;
+  min-width: 66px;
+  text-align: right;
 }
 
 .price-text {
-  max-width: 110px;
+  max-width: 104px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  line-height: 1.1;
+  line-height: 1.05;
   text-align: left;
 }
 
