@@ -105,87 +105,116 @@ strong {
 /* HERO */
 
 .hero-section {
-  padding: 26px 0 10px;
+  padding: 24px 0 10px;
 }
 
 .hero-content {
-  max-width: 980px;
+  max-width: 1180px;
   margin: 0 auto;
-  text-align: left;
+  display: grid;
+  grid-template-columns: 220px 1fr 310px;
+  align-items: center;
+  gap: 28px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
 }
 
-.hero-logo {
-  width: clamp(105px, 10vw, 140px);
-  height: auto;
-  margin: 0 0 18px;
-  opacity: 1;
+.hero-logos {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-logos img {
+  width: 88px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo-separator {
+  color: var(--accent-green);
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  padding: 9px 14px;
-  margin-bottom: 18px;
+  padding: 8px 13px;
+  margin-bottom: 12px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--accent-green);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   background: var(--light-green);
 }
 
 .hero-title {
-  max-width: 980px;
+  max-width: 760px;
   font-family: var(--f-serif);
-  font-size: clamp(54px, 7vw, 92px);
+  font-size: clamp(42px, 5.2vw, 76px);
   line-height: 0.92;
-  letter-spacing: -2.2px;
+  letter-spacing: -1.8px;
   text-transform: uppercase;
-  margin-bottom: 14px;
   color: var(--dark-green);
+  margin-bottom: 8px;
 }
 
 .hero-subtitle {
   font-family: var(--f-serif);
   color: var(--gold);
-  font-size: clamp(24px, 2.6vw, 34px);
+  font-size: clamp(22px, 2.4vw, 32px);
   line-height: 1.1;
-  margin-bottom: 16px;
+}
+
+.hero-offer-card {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 18px;
+  border-radius: 24px;
+  background: var(--cream);
+  border: 1px solid var(--line);
 }
 
 .hero-description {
-  max-width: 680px;
-  margin: 18px 0 24px;
   color: var(--muted);
-  line-height: 1.65;
-  font-size: 16px;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .price-card {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   width: fit-content;
-  padding: 11px 17px;
+  padding: 10px 15px;
   border-radius: 18px;
   background: linear-gradient(145deg, #f04a3f, #c92520);
   color: #ffffff;
   box-shadow: 0 12px 28px rgba(233, 52, 47, 0.24);
-  transform: rotate(-1deg);
 }
 
 .price {
   font-family: var(--f-serif);
-  font-size: 46px;
+  font-size: 42px;
   line-height: 0.9;
   font-weight: 700;
 }
 
 .price-text {
-  max-width: 120px;
+  max-width: 110px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -198,8 +227,8 @@ strong {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 52px;
-  padding: 0 24px;
+  min-height: 48px;
+  padding: 0 22px;
   border: 0;
   border-radius: 999px;
   background: var(--dark-green);
@@ -517,12 +546,20 @@ select.input option {
   }
 
   .hero-content {
-    max-width: 720px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-logos {
+    justify-content: flex-start;
   }
 
   .hero-title {
-    font-size: clamp(54px, 12vw, 86px);
-    letter-spacing: -1.8px;
+    font-size: clamp(42px, 10vw, 68px);
+  }
+
+  .hero-offer-card {
+    width: 100%;
   }
 
   .tapa-section {
@@ -552,39 +589,33 @@ select.input option {
   }
 
   .hero-section {
-    padding: 24px 0 8px;
+    padding: 18px 0 8px;
   }
 
-  .hero-logo {
-    width: 125px;
-    margin-bottom: 18px;
+  .hero-content {
+    padding: 20px;
   }
 
-  .eyebrow {
-    font-size: 10px;
-    letter-spacing: 1px;
+  .hero-logos img {
+    width: 76px;
+    height: 58px;
   }
 
   .hero-title {
-    font-size: 46px;
-    line-height: 0.94;
+    font-size: 42px;
     letter-spacing: -1px;
   }
 
   .hero-subtitle {
-    font-size: 25px;
+    font-size: 24px;
   }
 
-  .hero-description {
-    font-size: 15px;
+  .price {
+    font-size: 40px;
   }
 
   .price-card {
     transform: none;
-  }
-
-  .price {
-    font-size: 42px;
   }
 
   .local-cards {
