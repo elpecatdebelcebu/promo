@@ -4,15 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>La Ruta de la Tentación | Belcebú</title>
 
   <meta name="description"
-    content="Descubre nuestra tapa especial con bebida por solo 4€ y participa en los sorteos exclusivos de Belcebú." />
+    content="Tapa del mes en Belcebú y El Pecat. Tapa + bebida por 4€ los miércoles y jueves de mayo y junio. Participa con tu ticket y gana premios." />
+
+  <meta property="og:title" content="La Ruta de la Tentación | Belcebú" />
+  <meta property="og:description"
+    content="Tapa + bebida por 4€. Miércoles y jueves de mayo y junio. Participa con tu ticket y gana premios." />
+  <meta property="og:image" content="assets/flyers/flyer-belcebu.jpg" />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css" />
@@ -21,38 +28,88 @@
 
 <body>
   <div id="app">
+
     <header class="hero-section">
-      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
 
       <div class="hero-content">
         <img id="heroLogo" class="hero-logo" src="assets/logos/logo-belcebu.png" alt="Belcebú" />
 
-        <p class="eyebrow">Promo especial de jueves</p>
+        <p class="eyebrow">Miércoles y jueves · Mayo y junio</p>
 
         <h1 class="hero-title">
-          LA RUTA DE<br />
+          LA RUTA DE<br>
           LA TENTACIÓN
         </h1>
 
-        <p class="hero-subtitle">El pecado del jueves</p>
+        <p class="hero-subtitle">Tapa del mes + bebida</p>
+
+        <div class="price-card">
+          <span class="price">4€</span>
+          <span class="price-text">Tapa + 1 bebida</span>
+        </div>
 
         <p class="hero-description">
-          Tapa especial + bebida por solo <strong>4€</strong>.
-          Guarda tu ticket y participa en sorteos exclusivos.
+          Elige local, disfruta de la tapa especial, guarda tu ticket y participa
+          en los sorteos exclusivos de Belcebú.
         </p>
 
-        <div class="hero-cta">
-          <a href="#participa" class="btn-primary">Participar ahora</a>
-          <span class="price-badge">4€</span>
-        </div>
+        <a href="#participa" class="btn-primary">Participar con mi ticket</a>
       </div>
 
-      <div class="hero-image-card">
-        <img id="heroTapa" src="assets/tapas/tapa-belcebu-donut.jpg" alt="Tapa especial Belcebú" />
+      <div class="hero-photo-card">
+        <img id="heroTapa" src="assets/tapas/tapa-belcebu.jpg" alt="Donut relleno de pulled pork de Belcebú" />
       </div>
     </header>
 
-    <main class="col content-section">
+    <main class="content-section">
+
+      <section class="section-block local-selector-block">
+        <h2 class="section-title">Elige tu tentación</h2>
+        <p class="section-intro">
+          Puedes participar con ticket de Belcebú o de El Pecat.
+        </p>
+
+        <div class="local-cards">
+          <button class="local-card active" type="button" data-local="belcebu">
+            <img src="assets/logos/logo-belcebu.png" alt="Belcebú">
+            <span>Belcebú</span>
+            <small>Donut de pulled pork</small>
+          </button>
+
+          <button class="local-card" type="button" data-local="pecat">
+            <img src="assets/logos/logo-pecat.png" alt="El Pecat de Belcebú">
+            <span>El Pecat</span>
+            <small>Mini burger de sepia</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-block tapa-section">
+        <div class="tapa-copy">
+          <h2 class="section-title">La tapa del mes</h2>
+
+          <p id="tapaName" class="tapa-name">
+            Donut relleno de Pulled Pork
+          </p>
+
+          <p id="tapaDescription" class="tapa-description">
+            Donut relleno de pulled pork, cebolla encurtida, salsa cheddar y jalapeños.
+          </p>
+
+          <ul class="promo-list">
+            <li>Tapa + 1 bebida</li>
+            <li>Caña, copa de vino, refresco o agua</li>
+            <li>Miércoles y jueves de mayo y junio</li>
+            <li>Precio especial: 4€</li>
+          </ul>
+        </div>
+
+        <div class="flyer-card">
+          <img id="flyerImage" src="assets/flyers/flyer-belcebu.jpg" alt="Flyer tapa del mes Belcebú" />
+        </div>
+      </section>
+
       <section class="section-block">
         <h2 class="section-title">Cómo funciona</h2>
 
@@ -105,8 +162,11 @@
       </section>
     </main>
 
-    <section class="col form-section">
+    <section id="participa" class="form-section">
       <h2 class="section-title">Participa</h2>
+      <p class="section-intro">
+        Rellena tus datos y registra el número de ticket.
+      </p>
 
       <div class="input-group">
         <label class="label" for="localSelect">Local *</label>
