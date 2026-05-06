@@ -1,7 +1,8 @@
+Sustituye todo tu css/styles.css por este:
+
 /* =========================
    BELCEBÚ PROMOS - LANDING CLARA
 ========================= */
-
 :root {
   --bg: #f7f3ec;
   --page: #ffffff;
@@ -14,14 +15,13 @@
   --muted: #5f6f68;
   --line: rgba(63, 111, 90, 0.22);
   --gold: #a88445;
-
   --f-serif: 'Playfair Display', serif;
   --f-sans: 'Inter', sans-serif;
-
   --radius-xl: 30px;
   --shadow: 0 18px 48px rgba(15, 26, 23, 0.12);
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +62,7 @@ a {
   text-decoration: none;
 }
 
+/* GENERAL */
 #app {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -98,7 +99,6 @@ strong {
 }
 
 /* HERO */
-
 .hero-section {
   padding: 24px 0 10px;
 }
@@ -108,7 +108,7 @@ strong {
   margin: 0 auto;
   padding: 24px 34px;
   display: grid;
-  grid-template-columns: 220px 1fr 250px;
+  grid-template-columns: 240px 1fr 240px;
   gap: 18px;
   align-items: center;
   background: #ffffff;
@@ -122,7 +122,8 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 26px;
+  text-align: center;
 }
 
 .hero-logos img {
@@ -161,7 +162,7 @@ strong {
   max-width: 720px;
   margin: 0 auto 10px;
   font-family: var(--f-serif);
-  font-size: clamp(36px, 4.6vw, 68px);
+  font-size: clamp(38px, 4.9vw, 72px);
   line-height: 0.92;
   letter-spacing: -1.3px;
   text-transform: uppercase;
@@ -171,7 +172,7 @@ strong {
 .hero-subtitle {
   font-family: var(--f-serif);
   color: var(--gold);
-  font-size: clamp(20px, 2.2vw, 30px);
+  font-size: clamp(21px, 2.4vw, 32px);
   line-height: 1.1;
 }
 
@@ -179,12 +180,15 @@ strong {
   display: grid;
   gap: 14px;
   justify-items: center;
+  align-content: center;
   text-align: center;
   padding: 18px 16px;
   border-radius: 22px;
   background: var(--cream);
   border: 1px solid var(--line);
   max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero-description {
@@ -254,27 +258,33 @@ strong {
 }
 
 /* LOCAL SELECTOR */
-
 .local-selector-block {
   margin-top: 14px;
 }
 
-/* LOCAL CARDS */
+.local-selector-block .section-title,
+.local-selector-block .section-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* LOCAL CARDS */
 .local-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(320px, 420px));
+  justify-content: center;
   gap: 18px;
 }
 
 .local-card {
   min-height: 150px;
-  text-align: left;
+  text-align: center;
   color: var(--text);
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: 24px;
-  padding: 20px;
+  padding: 22px;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
@@ -290,8 +300,8 @@ strong {
   width: 126px;
   height: 70px;
   object-fit: contain;
-  object-position: left center;
-  margin-bottom: 14px;
+  object-position: center;
+  margin: 0 auto 14px;
 }
 
 .local-card span {
@@ -309,7 +319,6 @@ strong {
 }
 
 /* TAPA SECTION */
-
 .tapa-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -366,7 +375,6 @@ strong {
 }
 
 /* STEPS */
-
 .steps-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -403,7 +411,6 @@ strong {
 }
 
 /* PREMIOS */
-
 .prize-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -433,7 +440,6 @@ strong {
 }
 
 /* FORM */
-
 .form-section {
   max-width: 760px;
   margin: 24px auto 42px;
@@ -522,7 +528,6 @@ select.input option {
 }
 
 /* LEGAL LINKS */
-
 .legal-link {
   color: var(--accent-green);
   text-decoration: underline;
@@ -535,7 +540,6 @@ select.input option {
 }
 
 /* FOOTER */
-
 .main-footer {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -546,7 +550,6 @@ select.input option {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 960px) {
   #app {
     width: min(100% - 24px, 720px);
@@ -559,7 +562,7 @@ select.input option {
 
   .hero-logos {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-logos img {
@@ -567,25 +570,29 @@ select.input option {
   }
 
   .hero-copy {
-    text-align: left;
+    text-align: center;
   }
 
   .eyebrow {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-title {
     font-size: clamp(38px, 9vw, 60px);
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-offer-card {
     width: 100%;
     max-width: none;
-    text-align: left;
-    justify-items: start;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .price-card {
+    width: fit-content;
   }
 
   .tapa-section {
@@ -597,12 +604,12 @@ select.input option {
     justify-self: center;
   }
 
-  .price-card {
-    width: fit-content;
-  }
-
   .steps-list,
   .prize-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .local-cards {
     grid-template-columns: 1fr;
   }
 }
@@ -641,10 +648,6 @@ select.input option {
 
   .price {
     font-size: 38px;
-  }
-
-  .local-cards {
-    grid-template-columns: 1fr;
   }
 
   .local-card {
