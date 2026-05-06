@@ -6,6 +6,7 @@
   --bg: #050807;
   --dark-green: #07110e;
   --panel-soft: rgba(255, 255, 255, 0.045);
+
   --accent-green: #3f6f5a;
   --soft-green: #78a08b;
   --warm-white: #f2eee6;
@@ -13,8 +14,10 @@
   --line: rgba(120, 160, 139, 0.22);
   --gold: #c7a86b;
   --red: #e9342f;
+
   --f-serif: 'Playfair Display', serif;
   --f-sans: 'Inter', sans-serif;
+
   --radius-xl: 34px;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
 }
@@ -71,7 +74,7 @@ a {
 
 .section-block,
 .form-section {
-  margin: 24px 0;
+  margin: 18px 0;
   padding: clamp(22px, 4vw, 34px);
   background:
     linear-gradient(145deg, rgba(15, 26, 23, 0.92), rgba(7, 17, 14, 0.78));
@@ -105,19 +108,19 @@ strong {
 .hero-section {
   min-height: auto;
   display: block;
-  padding: 34px 0 10px;
+  padding: 24px 0 4px;
 }
 
 .hero-content {
-  max-width: 1080px;
+  max-width: 980px;
   margin: 0 auto;
   text-align: left;
 }
 
 .hero-logo {
-  width: clamp(120px, 12vw, 160px);
+  width: clamp(100px, 10vw, 135px);
   height: auto;
-  margin: 0 0 22px;
+  margin: 0 0 18px;
   opacity: 0.96;
 }
 
@@ -138,29 +141,29 @@ strong {
 }
 
 .hero-title {
-  max-width: 1080px;
+  max-width: 980px;
   font-family: var(--f-serif);
-  font-size: clamp(58px, 8vw, 118px);
-  line-height: 0.88;
-  letter-spacing: -2.8px;
+  font-size: clamp(54px, 7.2vw, 96px);
+  line-height: 0.9;
+  letter-spacing: -2.4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hero-subtitle {
   font-family: var(--f-serif);
   color: var(--gold);
-  font-size: clamp(24px, 3vw, 38px);
+  font-size: clamp(24px, 2.6vw, 34px);
   line-height: 1.1;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hero-description {
-  max-width: 720px;
-  margin: 20px 0 26px;
+  max-width: 660px;
+  margin: 18px 0 24px;
   color: var(--muted-white);
-  line-height: 1.65;
-  font-size: 17px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .price-card {
@@ -216,6 +219,12 @@ strong {
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
 }
 
+/* LOCAL SELECTOR */
+
+.local-selector-block {
+  margin-top: 10px;
+}
+
 /* LOCAL CARDS */
 
 .local-cards {
@@ -233,7 +242,10 @@ strong {
   border-radius: 24px;
   padding: 20px;
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .local-card:hover,
@@ -472,6 +484,19 @@ select.input option {
   color: #ff8a8a;
 }
 
+/* LEGAL LINKS */
+
+.legal-link {
+  color: var(--soft-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.legal-link:hover {
+  opacity: 0.8;
+}
+
 /* FOOTER */
 
 .main-footer {
@@ -577,16 +602,4 @@ select.input option {
     max-width: 100%;
     border-radius: 22px;
   }
-
-  .legal-link {
-    color: var(--soft-green);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: opacity 0.2s ease;
-  }
-
-  .legal-link:hover {
-    opacity: 0.8;
-  }
-
 }
