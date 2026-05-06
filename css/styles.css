@@ -557,52 +557,96 @@ select.input option {
   font-size: 12px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE TABLET
+========================= */
 
 @media (max-width: 960px) {
+
   #app {
     width: min(100% - 24px, 720px);
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 26px;
+    text-align: center;
   }
 
   .hero-logos {
     flex-direction: row;
     justify-content: center;
+    gap: 40px;
   }
 
   .hero-logos img {
-    width: 95px;
+    width: 120px;
   }
 
   .hero-copy {
     text-align: center;
+    padding: 0;
   }
 
   .eyebrow {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 14px;
   }
 
   .hero-title {
-    font-size: clamp(38px, 9vw, 60px);
-    margin-left: auto;
-    margin-right: auto;
+    font-size: clamp(42px, 9vw, 62px);
+    margin: 0 auto 12px;
+  }
+
+  .hero-subtitle {
+    text-align: center;
   }
 
   .hero-offer-card {
     width: 100%;
-    max-width: none;
-    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
     justify-items: center;
+    text-align: center;
   }
 
   .price-card {
-    width: fit-content;
+    width: 100%;
+    justify-content: center;
   }
+
+  .price-text {
+    text-align: left;
+  }
+
+  .btn-primary {
+    justify-self: center;
+  }
+
+  /* LOCALS */
+
+  .section-title,
+  .section-intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .local-cards {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .local-card {
+    text-align: center;
+  }
+
+  .local-card img {
+    margin: 0 auto 18px;
+    object-position: center;
+  }
+
+  /* TAPA */
 
   .tapa-section {
     grid-template-columns: 1fr;
@@ -613,17 +657,20 @@ select.input option {
     justify-self: center;
   }
 
+  /* GRID */
+
   .steps-list,
   .prize-grid {
     grid-template-columns: 1fr;
   }
-
-  .local-cards {
-    grid-template-columns: 1fr;
-  }
 }
 
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
 @media (max-width: 620px) {
+
   #app {
     width: min(100% - 18px, 480px);
   }
@@ -635,36 +682,64 @@ select.input option {
   }
 
   .hero-section {
-    padding: 18px 0 8px;
+    padding: 16px 0 8px;
   }
 
   .hero-content {
-    padding: 20px;
+    padding: 22px 20px;
+    gap: 22px;
+  }
+
+  .hero-logos {
+    gap: 26px;
   }
 
   .hero-logos img {
-    width: 82px;
+    width: 92px;
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 0.95;
     letter-spacing: -1px;
   }
 
   .hero-subtitle {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    padding: 7px 12px;
   }
 
   .price {
-    font-size: 38px;
+    font-size: 36px;
+  }
+
+  .price-text {
+    font-size: 14px;
+  }
+
+  .hero-description {
+    font-size: 13px;
   }
 
   .local-card {
     min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .local-card span {
+    font-size: 24px;
   }
 
   .flyer-card {
     max-width: 100%;
     border-radius: 22px;
+  }
+
+  .section-title {
+    font-size: 42px;
   }
 }
