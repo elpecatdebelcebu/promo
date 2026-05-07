@@ -14,11 +14,15 @@
   --muted: #5f6f68;
   --line: rgba(63, 111, 90, 0.22);
   --gold: #a88445;
+
   --f-serif: 'Playfair Display', serif;
   --f-sans: 'Inter', sans-serif;
+
   --radius-xl: 30px;
   --shadow: 0 18px 48px rgba(15, 26, 23, 0.12);
 }
+
+/* RESET */
 
 * {
   margin: 0;
@@ -59,6 +63,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* GENERAL */
 
 #app {
   width: min(1180px, calc(100% - 32px));
@@ -257,124 +263,92 @@ strong {
   justify-self: center;
 }
 
-/* LOCAL SELECTOR */
+/* PROMO CARDS */
 
-.local-selector-block {
-  margin-top: 14px;
-}
-
-.local-selector-block .section-title,
-.local-selector-block .section-intro {
+.promo-selector-block .section-title,
+.promo-selector-block .section-intro {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* LOCAL CARDS */
-
-.local-cards {
+.promo-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(320px, 420px));
+  grid-template-columns: repeat(2, minmax(280px, 430px));
   justify-content: center;
-  gap: 18px;
+  gap: 22px;
 }
 
-.local-card {
-  min-height: 150px;
+.promo-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--cream);
   text-align: center;
-  color: var(--text);
-  background: var(--cream);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  box-shadow: 0 12px 28px rgba(15, 26, 23, 0.08);
 }
 
-.local-card:hover,
-.local-card.active {
-  transform: translateY(-2px);
-  border-color: var(--accent-green);
-  background: var(--light-green);
-}
-
-.local-card img {
-  width: 126px;
-  height: 70px;
+.promo-logo {
+  width: 110px;
+  height: 62px;
   object-fit: contain;
-  object-position: center;
-  margin: 0 auto 14px;
+  margin: 0 auto;
 }
 
-.local-card span {
-  display: block;
-  font-family: var(--f-serif);
-  font-size: 28px;
-  line-height: 1;
-  color: var(--dark-green);
-}
-
-.local-card small {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-}
-
-/* TAPA SECTION */
-
-.tapa-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: clamp(24px, 4vw, 44px);
-  align-items: center;
-}
-
-.tapa-name {
-  max-width: 580px;
-  font-family: var(--f-serif);
-  font-size: clamp(30px, 4vw, 50px);
-  line-height: 1.02;
-  color: var(--gold);
-  margin: 22px 0 14px;
-}
-
-.tapa-description {
-  max-width: 640px;
-  color: var(--muted);
-  font-size: clamp(16px, 2vw, 19px);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-.promo-list {
-  max-width: 620px;
-  list-style: none;
-  display: grid;
-  gap: 10px;
-}
-
-.promo-list li {
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--cream);
-  color: var(--muted);
-}
-
-.flyer-card {
+.promo-flyer {
   width: 100%;
-  max-width: 360px;
-  justify-self: end;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 16px 34px rgba(15, 26, 23, 0.14);
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 20px;
   background: #ffffff;
+  border: 1px solid var(--line);
 }
 
-.flyer-card img {
-  width: 100%;
-  height: auto;
+.promo-card-copy h3 {
+  font-family: var(--f-serif);
+  font-size: 30px;
+  color: var(--dark-green);
+  margin-bottom: 6px;
+}
+
+.promo-card-copy p {
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* PROMO INFO */
+
+.tapas-info-section .section-title {
+  text-align: center;
+}
+
+.promo-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.promo-list-card {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.promo-list-card strong {
+  font-family: var(--f-serif);
+  font-size: 24px;
+}
+
+.promo-list-card span {
+  color: var(--muted);
+  font-size: 14px;
 }
 
 /* STEPS */
@@ -557,12 +531,9 @@ select.input option {
   font-size: 12px;
 }
 
-/* =========================
-   RESPONSIVE TABLET
-========================= */
+/* RESPONSIVE TABLET */
 
 @media (max-width: 960px) {
-
   #app {
     width: min(100% - 24px, 720px);
   }
@@ -614,50 +585,19 @@ select.input option {
     justify-content: center;
   }
 
-  .price-text {
-    text-align: left;
-  }
-
   .btn-primary {
     justify-self: center;
   }
 
-  /* LOCALS */
-
-  .section-title,
-  .section-intro {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .local-cards {
+  .promo-cards {
     grid-template-columns: 1fr;
     max-width: 520px;
     margin: 0 auto;
   }
 
-  .local-card {
-    text-align: center;
-  }
-
-  .local-card img {
-    margin: 0 auto 18px;
-    object-position: center;
-  }
-
-  /* TAPA */
-
-  .tapa-section {
+  .promo-list-grid {
     grid-template-columns: 1fr;
   }
-
-  .flyer-card {
-    max-width: 430px;
-    justify-self: center;
-  }
-
-  /* GRID */
 
   .steps-list,
   .prize-grid {
@@ -665,12 +605,9 @@ select.input option {
   }
 }
 
-/* =========================
-   RESPONSIVE MOBILE
-========================= */
+/* RESPONSIVE MOBILE */
 
 @media (max-width: 620px) {
-
   #app {
     width: min(100% - 18px, 480px);
   }
@@ -715,6 +652,7 @@ select.input option {
 
   .price {
     font-size: 36px;
+    min-width: 58px;
   }
 
   .price-text {
@@ -725,18 +663,20 @@ select.input option {
     font-size: 13px;
   }
 
-  .local-card {
-    min-height: auto;
-    padding: 24px 20px;
+  .promo-card {
+    padding: 16px;
   }
 
-  .local-card span {
-    font-size: 24px;
+  .promo-logo {
+    width: 95px;
   }
 
-  .flyer-card {
-    max-width: 100%;
-    border-radius: 22px;
+  .promo-flyer {
+    max-height: none;
+  }
+
+  .promo-card-copy h3 {
+    font-size: 26px;
   }
 
   .section-title {
